@@ -44,7 +44,7 @@ public class Scoreboard : MonoBehaviourPunCallbacks
         //scoreboardItems[player].UpdateItem(player, deaths);
         foreach(Player playerRef in PhotonNetwork.PlayerList)
         {
-            string deathse = playerRef.UserId;
+            //scoreboardItems
         }
     }
 
@@ -53,4 +53,15 @@ public class Scoreboard : MonoBehaviourPunCallbacks
         Destroy(scoreboardItems[player].gameObject);
         scoreboardItems.Remove(player);
     }
+
+    public ScoreboardItem GetItem(Player player)
+    {
+        foreach(var item in scoreboardItems)
+        {
+            Debug.Log(item.Key + " " + item.Value);
+        }
+        return scoreboardItems[player];
+    }
+
+    
 }

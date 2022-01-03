@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 2225547985703537713, guid: 571adfdcfe24c9e4cb44ea055648ecae, type: 3}
-  deaths: 0
-  kills: 0
+  red: {fileID: 2100000, guid: b177d0699b2921f41a0322529c38482e, type: 2}
+  blue: {fileID: 2100000, guid: 6290caf844d75964b90cc93b9b59e819, type: 2}
 --- !u!114 &3578797247787374471
 MonoBehaviour:
   m_ObjectHideFlags: 0

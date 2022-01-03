@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     int previousItemIndex = -1;
 
     const float maxHealth = 100f;
-    float currentHealth = maxHealth;
+    public float currentHealth = maxHealth;
 
     float currentAmmo;
 
@@ -153,6 +153,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         {
             Die();
         }
+    }
+
+    private void Update() {
+        if(transform.position.y < 0)
+            Die();
     }
 
     void Die()

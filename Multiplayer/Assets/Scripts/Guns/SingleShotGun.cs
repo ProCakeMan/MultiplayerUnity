@@ -31,6 +31,10 @@ public class SingleShotGun : Gun
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(((GunInfo)itemInfo).damage);
+            if(hit.collider.gameObject.GetComponent<PlayerController>()?.currentHealth <= ((GunInfo)itemInfo).damage)
+            {
+                transform.parent.parent.gameObject.GetComponent<PlayerManager>().stats["kills"] += 1;
+            }
             view.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
         }
     }

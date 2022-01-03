@@ -6,7 +6,7 @@ using TMPro;
 using Photon.Realtime;
 using Photon.Pun;
 
-public class ScoreboardItem : MonoBehaviour
+public class ScoreboardItem : MonoBehaviour, Photon.Pun.IPunObservable
 {
     public TMP_Text usernameText;
     public TMP_Text killsText;
@@ -18,14 +18,29 @@ public class ScoreboardItem : MonoBehaviour
         usernameText.text = player.NickName;
     }
 
-    public void UpdateItem(Player player, float deaths)
+    public void UpdateStat(float val, string stat)
     {
-        deathsText.text = (float.Parse(deathsText.text) + deaths).ToString();
+        switch(stat)
+        {
+            case "deaths":
+                deathsText.text = val.ToString();
+                break;
+            case "kills":
+                killsText.text = val.ToString();
+                break;
+        }
     }
-    
-    [PunRPC]
-    public void RPC_Update(Player player, float deaths)
+
+    public void UpdateStats(Dictionary<string, dynamic> stats)
     {
-        deathsText.text = (int.Parse(deathsText.text) + deaths).ToString();
+        foreach(var item in stats)
+        {
+            UpdateStat(item.Value, item.Key);
+        }
+    }
+
+    public void OnPhotonSerializeView (PhotonStream stream, PhotonMessageInfo info)
+    {
+
     }
 }
