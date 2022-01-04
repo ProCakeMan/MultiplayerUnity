@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Billboard
+    - BulletTrail
     - GunInfo
     - Launcher
     - Look
@@ -19,6 +20,7 @@ ScriptsOnlyBuild:
     - SingleShotGun
     - SpawnManager
     - SpawnPoint
+    - TeamManager
     - UserNameDisplay
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
@@ -95,8 +97,6 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
     - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
-    Unity.TextMeshPro.Editor.dll:
-    - TMPro.EditorUtilities.TMP_EditorPanelUI
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_InputField
@@ -105,7 +105,31 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
     Unity.VisualEffectGraph.Editor.dll:
+    - UnityEditor.VFX.Block.AttributeFromCurve
+    - UnityEditor.VFX.Block.SetAttribute
+    - UnityEditor.VFX.Operator.Multiply
+    - UnityEditor.VFX.Operator.Random
     - UnityEditor.VFX.UI.VFXViewWindow
+    - UnityEditor.VFX.VFXBasicInitialize
+    - UnityEditor.VFX.VFXBasicSpawner
+    - UnityEditor.VFX.VFXBasicUpdate
+    - UnityEditor.VFX.VFXDataParticle
+    - UnityEditor.VFX.VFXDataSpawner
+    - UnityEditor.VFX.VFXGraph
+    - UnityEditor.VFX.VFXMeshOutput
+    - UnityEditor.VFX.VFXParameter
+    - UnityEditor.VFX.VFXSlot
+    - UnityEditor.VFX.VFXSlotAnimationCurve
+    - UnityEditor.VFX.VFXSlotColor
+    - UnityEditor.VFX.VFXSlotFloat
+    - UnityEditor.VFX.VFXSlotFloat3
+    - UnityEditor.VFX.VFXSlotFloat4
+    - UnityEditor.VFX.VFXSlotGradient
+    - UnityEditor.VFX.VFXSlotMesh
+    - UnityEditor.VFX.VFXSlotTexture2D
+    - UnityEditor.VFX.VFXSlotUint
+    - UnityEditor.VFX.VFXSpawnerBurst
+    - UnityEditor.VFX.VFXUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -331,22 +355,26 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 8362}
     - Class: 114
-      Script: {instanceID: 8990}
-    - Class: 114
-      Script: {instanceID: 9038}
+      Script: {instanceID: 8992}
     - Class: 114
       Script: {instanceID: 9040}
     - Class: 114
-      Script: {instanceID: 9440}
+      Script: {instanceID: 9042}
     - Class: 114
-      Script: {instanceID: 9534}
+      Script: {instanceID: 9442}
     - Class: 114
-      Script: {instanceID: 9702}
+      Script: {instanceID: 9536}
     - Class: 114
-      Script: {instanceID: 9750}
+      Script: {instanceID: 9704}
     - Class: 114
-      Script: {instanceID: 10034}
+      Script: {instanceID: 9752}
+    - Class: 114
+      Script: {instanceID: 10036}
+    - Class: 114
+      Script: {instanceID: 27638}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -450,7 +478,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 8166}
     - Class: 114
-      Script: {instanceID: 9630}
+      Script: {instanceID: 8880}
+    - Class: 114
+      Script: {instanceID: 9632}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1858,7 +1888,7 @@ ScriptsOnlyBuild:
     className: Launcher
   - hash:
       serializedVersion: 2
-      Hash: d1f07c9e64b7817e6271f80bb03de25f
+      Hash: 8acfb47a9997bf0c56116eaa32ebfa46
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
@@ -1912,7 +1942,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 5417d1e8f7ff384c1904b993b90fad6c
+      Hash: 14461856ae0fee45f9289aee8a541df2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SingleShotGun
@@ -2392,6 +2422,12 @@ ScriptsOnlyBuild:
     className: CreateRoomUiForm
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TeamManager
+  - hash:
+      serializedVersion: 2
       Hash: 4fe8955e1c662935371b0936cafbb89b
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -2672,6 +2708,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime.dll
     namespaceName: UnityEngine.VFX.Utility
     className: VFXInputAxisBinder
+  - hash:
+      serializedVersion: 2
+      Hash: 26e157a3552c2c63b0f6ad3dc0648693
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BulletTrail
   platform: 19
   scenePathNames:
   - Assets/Scenes/Launcher.unity

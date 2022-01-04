@@ -259,7 +259,10 @@ MonoBehaviour:
   itemGameObject: {fileID: 3314125029661336235}
   bulletImpactPrefab: {fileID: 549823711729142692, guid: d994ebcec911db44287c38be75eb5119, type: 3}
   cam: {fileID: 2225547984044013600}
+  bulletTrail: {fileID: 0}
   flash: {fileID: 2932706333765377503}
+  bulletTrailPrefab: {fileID: 2446126600606618862, guid: aaafc603c1ef9514580e5a14dbcac5cf, type: 3}
+  gunPoint: {fileID: 3917448490778077592}
 --- !u!114 &2940078202112902531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,7 +369,10 @@ MonoBehaviour:
   itemGameObject: {fileID: 7298490727778711991}
   bulletImpactPrefab: {fileID: 549823711729142692, guid: d994ebcec911db44287c38be75eb5119, type: 3}
   cam: {fileID: 2225547984044013600}
+  bulletTrail: {fileID: 0}
   flash: {fileID: 2019544547130401348}
+  bulletTrailPrefab: {fileID: 2446126600606618862, guid: aaafc603c1ef9514580e5a14dbcac5cf, type: 3}
+  gunPoint: {fileID: 4380396415267622585}
 --- !u!114 &8768107935823012178
 MonoBehaviour:
   m_ObjectHideFlags: 0

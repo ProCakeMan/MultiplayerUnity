@@ -30,10 +30,10 @@ public class PlayerManager : MonoBehaviourPunCallbacks
         switch(team)
         {
             case "red":
-                controller.gameObject.GetComponent<MeshRenderer>().material = red;
+                //controller.gameObject.GetComponent<MeshRenderer>().material = red;
                 break;
             case "blue":
-                controller.gameObject.GetComponent<MeshRenderer>().material = blue;
+                //controller.gameObject.GetComponent<MeshRenderer>().material = blue;
                 break;
         }
         

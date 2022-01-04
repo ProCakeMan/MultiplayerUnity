@@ -65,9 +65,10 @@
      <Compile Include="Assets\SpawnManager.cs" />
      <Compile Include="Assets\Scripts\Server\SpawnPlayers.cs" />
      <Compile Include="Assets\Scripts\Guns\GunInfo.cs" />
+     <Compile Include="Assets\TeamManager.cs" />
      <Compile Include="Assets\Scripts\Server\CreateAndJoinRoom.cs" />
      <Compile Include="Assets\Scripts\Guns\IDamageable.cs" />
-     <Compile Include="Assets\TeamManager.cs" />
+     <Compile Include="Assets\Scripts\Guns\BulletTrail.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
